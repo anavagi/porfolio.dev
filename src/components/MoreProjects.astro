@@ -1,10 +1,10 @@
 ---
 import GitHub from "./icons/GitHub.astro"
-import Link from "./icons/Link.astro"
 import LinkButton from "./LinkButton.astro"
 import Laravel from "./icons/Laravel.astro"
 import Php from "./icons/Php.astro"
 import Python from "./icons/Python.astro"
+import MySQL from "./icons/MySQL.astro"
 
 const TAGS = {
   PHP: {
@@ -20,6 +20,11 @@ const TAGS = {
     name: "Python",
     class: "text-black",
     icon: Python,
+  },
+  MYSQL: {
+    name: "MySQL",
+    class: "text-black",
+    icon: MySQL,
   },
 }
 const FIELDS = {
@@ -47,6 +52,7 @@ const PROJECTS = [
       "An application that helps blog creators find content and streamline their publications. Final project for a higher education degree, graded A+. Created from scratch using the PHP framework, Laravel.",
     github: "https://github.com/anavagi/projecteDawOrblo",
     image: "/projects/orblo.PNG",
+    date: "Final project DAW - 2020",
     tags: [TAGS.LARAVEL, TAGS.PHP],
     fields: [FIELDS.BACKEND, FIELDS.FRONTEND],
   },
@@ -55,17 +61,31 @@ const PROJECTS = [
     description:
       "Implemented KMeans and KNN algorithms to solve image labeling based on colors and shapes, identifying +10 coloras and +8 shape labels. Test and analyses highlighted qualitative and quantitative results, along with improvements to both algorithms."
       ,
+    date: "2n year Compunter Engineering - 2022",
     github: "https://github.com/anavagi/PR2_Etiquetatge",
     image: "/projects/iaproject.png",
+
     tags: [TAGS.PYTHON],
     fields: [FIELDS.IA],
   },
+  {
+    title: "Simple page - working with MySQL and PHP",
+    description:
+      "A simple application for user registration, using relational databases and full-stack programming languages for the graphical interface and data management"
+      ,
+    date: "2n DAW - 2019/2020",
+    github: "https://github.com/anavagi/project-phpmysql",
+    image: "/projects/iaproject.png", //falta cambiar
+    tags: [TAGS.PHP, TAGS.MYSQL],
+    fields: [FIELDS.BACKEND, FIELDS.FRONTEND],
+  },
 ]
+
 ---
 
 <div class="flex flex-col gap-y-16">
   {
-    PROJECTS.map(({ image, title, description, tags, github, fields }) => (
+    PROJECTS.map(({ image, title, description, tags, github, fields,date }) => (
     <article class="flex flex-col space-x-0 space-y-8 group md:flex-row md:space-x-8 md:space-y-0">
   <div class="w-full md:w-1/2">
     <div class="relative flex flex-col items-center col-span-6 row-span-5 gap-8 transition duration-500 ease-in-out transform shadow-xl overflow-clip rounded-xl sm:rounded-xl md:group-hover:-translate-y-1 md:group-hover:shadow-2xl lg:hover:bg-gray-800/50">
@@ -77,6 +97,8 @@ const PROJECTS = [
     <h3 class="text-2xl font-bold text-gray-800 dark:text-gray-100">
       {title}
     </h3>
+    <time class="mb-2 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">{date}</time>
+
     <div class="flex flex-wrap mt-2">
       <div>
   <ul class="flex flex-row mb-2 gap-x-2">
@@ -104,7 +126,6 @@ const PROJECTS = [
     ))}
   </ul>
 </div>
-
       <div class="mt-2 text-gray-700 dark:text-gray-400">{description}</div>
       <footer class="flex items-end justify-start mt-4 gap-x-4">
           {github && (
