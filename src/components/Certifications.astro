@@ -1,0 +1,30 @@
+---
+import CertificationItem from "./CertificationItem.astro"
+
+const CERTIFICATIONS = [
+  {
+    description:
+      "WS_Certified_Cloud_Practitioner_certificate",
+      link: "/certifications/AWS_Certified_Cloud_Practitioner_certificate.jpg"
+  },
+  {
+    link:"/certifications/Credencial_AnaValero_ MicrosoftLearn.jpg",
+      description: "Credencial_AnaValero_ MicrosoftLearn_AZ900"
+    },
+    {
+    link:"/certifications/CertificacionSpring.PNG",
+      description: "Credencial_AnaValero_ SpringBoot_EcosystemCore"
+    },
+]
+---
+
+<div class="grid grid-cols-2 md:grid-cols-3 gap-4">
+  {
+    CERTIFICATIONS.map((certification) => (
+      <div class="">
+        <CertificationItem {...certification} />
+      </div>
+    ))
+  }
+</div>
+

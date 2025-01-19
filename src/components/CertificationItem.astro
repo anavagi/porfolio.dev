@@ -1,0 +1,15 @@
+---
+import LinkInline from "./LinkInline.astro"
+
+interface Props {
+  title: string
+  company: string
+  description: string
+  link?: string
+  date: string
+  comment?: string
+}
+
+const { title, company, description, link, date,comment } = Astro.props
+---
+<img class="h-auto max-w-full rounded-lg" src={link} alt={description}>

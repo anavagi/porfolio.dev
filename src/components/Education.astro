@@ -1,0 +1,35 @@
+---
+import EducationItem from "./EducationItem.astro"
+const EDUCATION = [
+  {
+    date: "2020 - At present...",
+    title: "Computer Engineering",
+    company: "Universitat oberta de Catalunya, UOC",
+    comment: "Universidad autónoma de Barcelona, UAB.",
+    description:
+      "Honors in subjects of statistics and programming laboratory. Computing mention."
+  },
+  {
+    date: "2018 - 2020",
+    title: "Vocational training (FP) web application development",
+    company: "Lacetania, Manresa",
+    description:
+      "HTML, CSS, PHP, Python (Django), Angular, Laravel, JavaScript. Linux, Git, VirtualBox and Docker",
+  },
+  {
+    date: "2016 - 2018",
+    title: "Baccalaureate technological",
+    company: "IES Quercus, Sant Joan de Vilatorrada",
+    },
+]
+---
+
+<ol class="items-center sm:flex">
+  {
+    EDUCATION.map((education) => (
+  <li class="relative mb-6 sm:mb-0">
+      <EducationItem {...education} />
+    </li>
+    ))
+  }
+</ol>

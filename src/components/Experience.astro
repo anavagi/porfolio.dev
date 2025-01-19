@@ -1,0 +1,37 @@
+---
+import ExperienceItem from "./ExperienceItem.astro"
+const EXPERIENCE = [
+  {
+    date: "2022 - At present...",
+    title: "Senior developer",
+    company: "Capgemini Engineering",
+    description:
+      "Work on projects in Java, Spring Boot and React enviroments. People manager over 5 juniors. Experience with organizational applications. Project technical management capacites."
+  },
+  {
+    date: "2021 - 2022",
+    title: "Process department technician",
+    company: "Minorisa de Sistemas informáticos y Gestión S.L",
+    description:
+      "Help desk ans systems assistance. Use of Python for the automation of 90% technical processes. Leadership of Vue.js project. Basic knowledge of networks and systems, +5 projects worked with virtual machines.",
+  },
+  {
+    date: "2019 - 2020",
+    title: "Support in the communication and web development departmen",
+    company: "Remsa S.L",
+    description:
+      "Intern, working on current real project where all the work done was published on the web. Use of JavaScript, CSS, HTML",
+    link: "Recommendation letter"
+    },
+]
+---
+
+<ol class="relative mt-16">
+  {
+    EXPERIENCE.map((experience) => (
+      <li class="">
+        <ExperienceItem {...experience} />
+      </li>
+    ))
+  }
+</ol>
