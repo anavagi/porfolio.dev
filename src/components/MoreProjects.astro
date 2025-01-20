@@ -5,9 +5,21 @@ import Laravel from "./icons/Laravel.astro"
 import Php from "./icons/Php.astro"
 import Python from "./icons/Python.astro"
 import MySQL from "./icons/MySQL.astro"
+import HTML from "./icons/HTML.astro"
+import CSS from "./icons/CSS.astro"
+import JavaScript from "./icons/JavaScript.astro"
+import JQuery from "./icons/JQuery.astro"
+import MongoDB from "./icons/MongoDB.astro"
+import NodeJS from "./icons/NodeJS.astro"
+import Postman from "./icons/Postman.astro"
+import C from "./icons/C.astro"
+import Java from "./icons/JavaB.astro"
+import SpringBoot from "./icons/SpringBoot.astro"
+
 
 const TAGS = {
   PHP: {
+    name: "Php",
     class: "text-white",
     icon: Php,
   },
@@ -26,6 +38,58 @@ const TAGS = {
     class: "text-black",
     icon: MySQL,
   },
+  
+  HTML: {
+    name: "HTML",
+    class: "text-black",
+    icon: HTML,
+  },
+  
+  CSS: {
+    name: "CSS",
+    class: "text-black",
+    icon: CSS,
+  },
+  JAVASCRIPT: {
+    name: "JavaScript",
+    class: "text-black",
+    icon: JavaScript,
+  },
+  JQUERY: {
+    name: "JQuery",
+    class: "text-black",
+    icon: JQuery,
+  },
+  NodeJS: {
+    name: "NodeJS",
+    class: "text-black",
+    icon: NodeJS,
+  },
+  MongoDB: {
+    name: "MongoDB",
+    class: "text-black",
+    icon: MongoDB,
+  },
+  Postman: {
+    name: "Postman",
+    class: "text-black",
+    icon: Postman,
+  },
+  C: {
+    name: "C#",
+    class: "text-black",
+    icon: C,
+  },
+  Java: {
+    name: "Java",
+    class: "text-black",
+    icon: Java,
+  },
+  SpringBoot: {
+    name: "SpringBoot",
+    class: "text-black",
+    icon: SpringBoot,
+  },
 }
 const FIELDS = {
   BACKEND: {
@@ -40,21 +104,22 @@ const FIELDS = {
     name: "AWS",
     class: "bg-green-200 text-black",
   },
-  IA: {
-    name: "IA",
+  Algoritmos: {
+    name: "Algoritmos",
     class: "bg-green-200 text-black",
   },
 }
 const PROJECTS = [
-  {
-    title: "ORBLO - Organizational web for bloggers",
+{
+    title: "Microservices system - Solution for transactions",
     description:
-      "An application that helps blog creators find content and streamline their publications. Final project for a higher education degree, graded A+. Created from scratch using the PHP framework, Laravel.",
-    github: "https://github.com/anavagi/projecteDawOrblo",
-    image: "/projects/orblo.PNG",
-    date: "Final project DAW - 2020",
-    tags: [TAGS.LARAVEL, TAGS.PHP],
-    fields: [FIELDS.BACKEND, FIELDS.FRONTEND],
+      "This project implements a microservices system to manage online purchases, ensuring consistency between services such as payments and stock. Failures and distributed transactions are addressed, guaranteeing the integrity of the process.Project worked with Kafka server."
+      ,
+    date: "Hipo Exercice- 2024",
+    github: "https://github.com/anavagi/project-microservicios",
+    image: "/projects/projectmicroservicios.png",
+    tags: [TAGS.Java, TAGS.SpringBoot],
+    fields: [FIELDS.BACKEND],
   },
   {
     title: "Labeling with python - Artificial Intelligence university practice",
@@ -66,7 +131,28 @@ const PROJECTS = [
     image: "/projects/iaproject.png",
 
     tags: [TAGS.PYTHON],
-    fields: [FIELDS.IA],
+    fields: [FIELDS.Algoritmos],
+  },
+  {
+    title: "Graphs with C++ - Artificial Intelligence university practice",
+    description:
+      "This project focuses on the management and processing of geospatial data through key functions. BallTree handles trees and coordinates, while MapaRender focuses on rendering elements and routes. Classes like Util and XML4OSMUtil process geographic and XML data, complemented by MapaBase, which manages points of interest and shortes paths."
+      ,
+    github: "https://github.com/anavagi/lp-practica",
+    date: "2n year Compunter Engineering - 2022",
+    image: "/projects/projectsetiquetatge.png",
+    tags: [TAGS.C],
+    fields: [FIELDS.Algoritmos],
+  },
+  {
+    title: "ORBLO - Organizational web for bloggers",
+    description:
+    "An application that helps blog creators find content and streamline their publications. Final project for a higher education degree, graded A+. Created from scratch using the PHP framework, Laravel. Auth with Composer and Postgres database. Updated in Heroku, online server.",
+    github: "https://github.com/anavagi/projecteDawOrblo",
+    image: "/projects/orblo.PNG",
+    date: "Final project DAW - 2020",
+    tags: [TAGS.LARAVEL, TAGS.PHP],
+    fields: [FIELDS.BACKEND, FIELDS.FRONTEND],
   },
   {
     title: "Simple page - working with MySQL and PHP",
@@ -75,9 +161,65 @@ const PROJECTS = [
       ,
     date: "2n DAW - 2019/2020",
     github: "https://github.com/anavagi/project-phpmysql",
-    image: "/projects/iaproject.png", //falta cambiar
-    tags: [TAGS.PHP, TAGS.MYSQL],
+    image: "/projects/prjectmysqlph.png", 
+    tags: [TAGS.PHP, TAGS.MYSQL, TAGS.HTML, TAGS.CSS],
     fields: [FIELDS.BACKEND, FIELDS.FRONTEND],
+  }
+  ,
+  {
+    title: "Simple Q&A application - working with Django",
+    description:
+      "A simple Q&A application built using Django"
+      ,
+    date: "1n DAW - 2018",
+    github: "https://github.com/anavagi/project-django",
+    image: "/projects/djangoproject.png", 
+    tags: [TAGS.PYTHON],
+    fields: [FIELDS.BACKEND, FIELDS.FRONTEND],
+  },
+  {
+    title: "Battleship - working with Python",
+    description:
+      "An application that simulates the game of Battleship. You can choose the language throught the country's flag and play by a graphical interface. It allows saving game progress and playing with more than one player simultaneously."
+      ,
+    date: "1n DAW - 2018",
+    github: "https://github.com/anavagi/project-batallanaval",
+    image: "/projects/batallanaval.png", 
+    tags: [TAGS.PYTHON],
+    fields: [FIELDS.BACKEND, FIELDS.FRONTEND],
+  },
+  {
+    title: "Dynamic web page - working JQuery",
+    description:
+      "A dynamic web page with various functionalities. It provides a clock displayin the current time, a contact form, and dropdowns to display subject content"
+      ,
+    date: "1n DAW - 2018",
+    github: "https://github.com/anavagi/project-jquery",
+    image: "/projects/jqueryproject.png", 
+    tags: [TAGS.JAVASCRIPT, TAGS.JQUERY,TAGS.HTML, TAGS.CSS],
+    fields: [FIELDS.FRONTEND],
+  },
+  {
+    title: "Upload images - working with MongoDB and NodeJS",
+    description:
+      "An application to learn how NodeJS works and how databases like MongoBD needs to be deploy in a project. It implements the upload and download of images using Postman"
+      ,
+    date: "1n DAW - 2019",
+    github: "https://github.com/anavagi/project-nodejs",
+    image: "/projects/projectnodejs.png", 
+    tags: [TAGS.NodeJS, TAGS.MongoDB,TAGS.Postman],
+    fields: [FIELDS.BACKEND],
+  },
+  {
+    title: "Quick Start - projects in HTML/CSS",
+    description:
+      "Four simple projects in HTML and CSS: a rotating cube, an introduction to the famous Star Wars movies, and two simple web page layouts."
+      ,
+    date: "1n DAW - 2018",
+    github: "https://github.com/anavagi/projects-htmlcss",
+    image: "/projects/htmlcssprojects.png", 
+    tags: [TAGS.HTML, TAGS.CSS],
+    fields: [FIELDS.FRONTEND],
   },
 ]
 

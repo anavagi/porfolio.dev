@@ -1,13 +1,21 @@
 ---
 import GitHub from "./icons/GitHub.astro"
-import Link from "./icons/Link.astro"
 import LinkButton from "./LinkButton.astro"
 import Laravel from "./icons/Laravel.astro"
 import Php from "./icons/Php.astro"
 import Python from "./icons/Python.astro"
+import MySQL from "./icons/MySQL.astro"
+import HTML from "./icons/HTML.astro"
+import CSS from "./icons/CSS.astro"
+import MongoDB from "./icons/MongoDB.astro"
+import NodeJS from "./icons/NodeJS.astro"
+import Postman from "./icons/Postman.astro"
+import Java from "./icons/JavaB.astro"
+import SpringBoot from "./icons/SpringBoot.astro"
 
 const TAGS = {
   PHP: {
+    name: "Php",
     class: "text-white",
     icon: Php,
   },
@@ -21,6 +29,46 @@ const TAGS = {
     class: "text-black",
     icon: Python,
   },
+  MYSQL: {
+    name: "MySQL",
+    class: "text-black",
+    icon: MySQL,
+  },
+  HTML: {
+    name: "HTML",
+    class: "text-black",
+    icon: HTML,
+  },
+  CSS: {
+    name: "CSS",
+    class: "text-black",
+    icon: CSS,
+  },
+  NodeJS: {
+    name: "NodeJS",
+    class: "text-black",
+    icon: NodeJS,
+  },
+  MongoDB: {
+    name: "MongoDB",
+    class: "text-black",
+    icon: MongoDB,
+  },
+  Postman: {
+    name: "Postman",
+    class: "text-black",
+    icon: Postman,
+  },
+  Java: {
+    name: "Java",
+    class: "text-black",
+    icon: Java,
+  },
+  SpringBoot: {
+    name: "SpringBoot",
+    class: "text-black",
+    icon: SpringBoot,
+  },
 }
 const FIELDS = {
   BACKEND: {
@@ -30,26 +78,62 @@ const FIELDS = {
   FRONTEND: {
     name: "Frontend",
     class: "bg-green-200 text-black",
-  },
-  AWS: {
-    name: "AWS",
-    class: "bg-green-200 text-black",
-  },
-  IA: {
-    name: "IA",
-    class: "bg-green-200 text-black",
-  },
+  }
 }
 const PROJECTS = [
+{
+    title: "Microservices system - Solution for transactions",
+    description:
+    "This project implements a microservices system to manage online purchases, ensuring consistency between services such as payments and stock. Failures and distributed transactions are addressed, guaranteeing the integrity of the process.Project worked with Kafka server."
+    ,
+    date: "Hipo Exercice- 2024",
+    github: "https://github.com/anavagi/project-microservicios",
+    image: "/projects/projectmicroservicios.png",
+    tags: [TAGS.Java, TAGS.SpringBoot],
+    fields: [FIELDS.BACKEND],
+  },
   {
     title: "ORBLO - Organizational web for bloggers",
     description:
-      "An application that helps blog creators find content and streamline their publications. Final project for a higher education degree, graded A+. Created from scratch using the PHP framework, Laravel.",
+    "An application that helps blog creators find content and streamline their publications. Final project for a higher education degree, graded A+. Created from scratch using the PHP framework, Laravel. Auth with Composer and Postgres database. Updated in Heroku, online server.",
     github: "https://github.com/anavagi/projecteDawOrblo",
     image: "/projects/orblo.PNG",
     tags: [TAGS.LARAVEL, TAGS.PHP],
     fields: [FIELDS.BACKEND, FIELDS.FRONTEND],
-  }
+  },
+  {
+    title: "Battleship - working with Python",
+    description:
+      "An application that simulates the game of Battleship. You can choose the language throught the country's flag and play by a graphical interface. It allows saving game progress and playing with more than one player simultaneously."
+      ,
+    date: "1n DAW - 2018",
+    github: "https://github.com/anavagi/project-batallanaval",
+    image: "/projects/batallanaval.png", 
+    tags: [TAGS.PYTHON],
+    fields: [FIELDS.BACKEND, FIELDS.FRONTEND],
+  },
+  {
+    title: "Simple page - working with MySQL and PHP",
+    description:
+      "A simple application for user registration, using relational databases and full-stack programming languages for the graphical interface and data management"
+      ,
+    date: "2n DAW - 2019/2020",
+    github: "https://github.com/anavagi/project-phpmysql",
+    image: "/projects/prjectmysqlph.png", 
+    tags: [TAGS.PHP, TAGS.MYSQL, TAGS.HTML, TAGS.CSS],
+    fields: [FIELDS.BACKEND, FIELDS.FRONTEND],
+  },
+  {
+    title: "Upload images - working with MongoDB and NodeJS",
+    description:
+      "An application to learn how NodeJS works and how databases like MongoBD needs to be deploy in a project. It implements the upload and download of images using Postman"
+      ,
+    date: "1n DAW - 2019",
+    github: "https://github.com/anavagi/project-nodejs",
+    image: "/projects/projectnodejs.png", 
+    tags: [TAGS.NodeJS, TAGS.MongoDB,TAGS.Postman],
+    fields: [FIELDS.BACKEND],
+  },
 ]
 ---
 

@@ -3,13 +3,12 @@
 interface Props {
   title: string
   company: string
-  description: string
-  link?: string
-  date: string
+  description?: string
+  date?: string
   comment?: string
 }
 
-const { title, company, description, link, date,comment } = Astro.props
+const { title, company, description, date,comment } = Astro.props
 ---
   
       <div class="flex items-center">

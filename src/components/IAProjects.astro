@@ -1,10 +1,10 @@
 ---
 import GitHub from "./icons/GitHub.astro"
-import Link from "./icons/Link.astro"
 import LinkButton from "./LinkButton.astro"
 import Laravel from "./icons/Laravel.astro"
 import Php from "./icons/Php.astro"
 import Python from "./icons/Python.astro"
+import C from "./icons/C.astro"
 
 const TAGS = {
   PHP: {
@@ -21,6 +21,11 @@ const TAGS = {
     class: "text-black",
     icon: Python,
   },
+  C: {
+    name: "C#",
+    class: "text-black",
+    icon: C,
+  },
 }
 const FIELDS = {
   BACKEND: {
@@ -35,8 +40,8 @@ const FIELDS = {
     name: "AWS",
     class: "bg-green-200 text-black",
   },
-  IA: {
-    name: "IA",
+  Algoritmos: {
+    name: "Algoritmos",
     class: "bg-green-200 text-black",
   },
 }
@@ -47,9 +52,21 @@ const PROJECTS = [
       "Implemented KMeans and KNN algorithms to solve image labeling based on colors and shapes, identifying +10 coloras and +8 shape labels. Test and analyses highlighted qualitative and quantitative results, along with improvements to both algorithms."
       ,
     github: "https://github.com/anavagi/PR2_Etiquetatge",
+    date: "2n year Compunter Engineering - 2022",
     image: "/projects/iaproject.png",
     tags: [TAGS.PYTHON],
-    fields: [FIELDS.IA],
+    fields: [FIELDS.Algoritmos],
+  },
+  {
+    title: "Graphs with C++ - Artificial Intelligence university practice",
+    description:
+      "This project focuses on the management and processing of geospatial data through key functions. BallTree handles trees and coordinates, while MapaRender focuses on rendering elements and routes. Classes like Util and XML4OSMUtil process geographic and XML data, complemented by MapaBase, which manages points of interest and shortes paths."
+      ,
+    github: "https://github.com/anavagi/lp-practica",
+    date: "2n year Compunter Engineering - 2022",
+    image: "/projects/projectsetiquetatge.png",
+    tags: [TAGS.C],
+    fields: [FIELDS.Algoritmos],
   },
 ]
 ---

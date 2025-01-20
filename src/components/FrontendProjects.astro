@@ -4,9 +4,15 @@ import LinkButton from "./LinkButton.astro"
 import Laravel from "./icons/Laravel.astro"
 import Php from "./icons/Php.astro"
 import Python from "./icons/Python.astro"
+import HTML from "./icons/HTML.astro"
+import CSS from "./icons/CSS.astro"
+import JavaScript from "./icons/JavaScript.astro"
+import JQuery from "./icons/JQuery.astro"
+import MySQL from "./icons/MySQL.astro"
 
 const TAGS = {
   PHP: {
+    name: "Php",
     class: "text-white",
     icon: Php,
   },
@@ -19,7 +25,35 @@ const TAGS = {
     name: "Python",
     class: "text-black",
     icon: Python,
+  },  
+  HTML: {
+    name: "HTML",
+    class: "text-black",
+    icon: HTML,
   },
+  
+  CSS: {
+    name: "CSS",
+    class: "text-black",
+    icon: CSS,
+  },
+  JAVASCRIPT: {
+    name: "JavaScript",
+    class: "text-black",
+    icon: JavaScript,
+  },
+
+  JQUERY: {
+    name: "JQuery",
+    class: "text-black",
+    icon: JQuery,
+  },
+  MYSQL: {
+    name: "MySQL",
+    class: "text-black",
+    icon: MySQL,
+  },
+
 }
 const FIELDS = {
   BACKEND: {
@@ -43,10 +77,54 @@ const PROJECTS = [
   {
     title: "ORBLO - Organizational web for bloggers",
     description:
-      "An application that helps blog creators find content and streamline their publications. Final project for a higher education degree, graded A+. Created from scratch using the PHP framework, Laravel.",
+    "An application that helps blog creators find content and streamline their publications. Final project for a higher education degree, graded A+. Created from scratch using the PHP framework, Laravel. Auth with Composer and Postgres database. Updated in Heroku, online server.",
     github: "https://github.com/anavagi/projecteDawOrblo",
     image: "/projects/orblo.PNG",
     tags: [TAGS.LARAVEL, TAGS.PHP],
+    fields: [FIELDS.BACKEND, FIELDS.FRONTEND],
+  },
+  {
+    title: "Quick Start - projects in HTML/CSS",
+    description:
+      "Four simple projects in HTML and CSS: a rotating cube, an introduction to the famous Star Wars movies, and two simple web page layouts."
+      ,
+    date: "1n DAW - 2018",
+    github: "https://github.com/anavagi/projects-htmlcss",
+    image: "/projects/htmlcssprojects.png", 
+    tags: [TAGS.HTML, TAGS.CSS],
+    fields: [FIELDS.FRONTEND],
+  },
+  {
+    title: "Dynamic web page - working JQuery",
+    description:
+      "A dynamic web page with various functionalities. It provides a clock displayin the current time, a contact form, and dropdowns to display subject content"
+      ,
+    date: "1n DAW - 2018",
+    github: "https://github.com/anavagi/project-jquery",
+    image: "/projects/jqueryproject.png", 
+    tags: [TAGS.JAVASCRIPT, TAGS.JQUERY,TAGS.HTML, TAGS.CSS],
+    fields: [FIELDS.FRONTEND],
+  },
+  {
+    title: "Battleship - working with Python",
+    description:
+      "An application that simulates the game of Battleship. You can choose the language throught the country's flag and play by a graphical interface. It allows saving game progress and playing with more than one player simultaneously."
+      ,
+    date: "1n DAW - 2018",
+    github: "https://github.com/anavagi/project-batallanaval",
+    image: "/projects/batallanaval.png", 
+    tags: [TAGS.PYTHON],
+    fields: [FIELDS.BACKEND, FIELDS.FRONTEND],
+  },
+  {
+    title: "Simple page - working with MySQL and PHP",
+    description:
+      "A simple application for user registration, using relational databases and full-stack programming languages for the graphical interface and data management"
+      ,
+    date: "2n DAW - 2019/2020",
+    github: "https://github.com/anavagi/project-phpmysql",
+    image: "/projects/prjectmysqlph.png", 
+    tags: [TAGS.PHP, TAGS.MYSQL, TAGS.HTML, TAGS.CSS],
     fields: [FIELDS.BACKEND, FIELDS.FRONTEND],
   }
 ]
